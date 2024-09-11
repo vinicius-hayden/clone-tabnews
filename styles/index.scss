@@ -9,37 +9,50 @@
   margin-left: 5%;
   justify-content: center;
   align-items: center;
-  .main-quote{
-    display: flex;
+
+  .main-quote {
+    .quote-photo {
+      display: flex;
+
+    }
+    
     .main-phrase {
       font-family: 'Roboto', 'Times New Roman', Times, serif;
       font-weight: bold;
       font-size: 45px;
       width: 67.5vw;
-      .main-author {
-        font-size: 29.5px;
-        font-family: 'Times New Roman';
-        font-weight: 100;
-      }
-      .main-purpose {
-        margin-bottom: 25px;
-        font-size: 22.5px;
-        font-weight: 100;
-        width: 52.5vw;
-        background-color: rgb(211, 81, 81);
-      }
+    }
 
+    .main-author {
+      font-size: 29.5px;
+      font-family: 'Times New Roman';
+      font-weight: 100;
     }
-    
-    .main-image-quote {
-      background-image: url('https://www.musee-rodin.fr/sites/default/files/styles/carrousel_medium/public/2020-12/incontournables.jpg?itok=EuR_c1ll');
-      background-repeat: no-repeat; 
-      background-size: cover;
-      width: 25vw;
-      height: 55vh; 
-      box-shadow: 22.5px 22.5px 22.5px rgb(129, 127, 127);
+
+    .main-purpose {
+      margin-bottom: 25px;
+      font-size: 22.5px;
+      font-weight: 100;
+      font-family: 'Roboto', 'Times New Roman';
+      width: 52.5vw;
+      background-color: rgb(211, 81, 81);
+      padding: 15px;
+      line-height: 1.6;
     }
-    
   }
-  
+
+  .main-image-quote {
+    background-image: url('https://www.musee-rodin.fr/sites/default/files/styles/carrousel_medium/public/2020-12/incontournables.jpg?itok=EuR_c1ll');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 25vw;
+    height: 55vh;
+    box-shadow: 22.5px 22.5px 22.5px rgb(129, 127, 127);
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      width: 26.5vw;
+      height: 59.5vh;
+    }
+  }
 }
