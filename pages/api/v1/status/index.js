@@ -12,7 +12,7 @@ async function status(request, response) {
   );
 
   let queryUsedConnections = await database.query(
-    `SELECT * FROM pg_stat_activity WHERE datname = 'local_db';`,
+    `SELECT count(*)::int FROM pg_stat_activity WHERE datname = 'local_db';`,
   );
   const openedConnections = queryUsedConnections.rows.length;
 
