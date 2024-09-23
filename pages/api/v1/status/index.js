@@ -19,7 +19,7 @@ async function status(request, response) {
   }  
     
   );
-  const openedConnections = queryUsedConnections.rows.length;
+  const openedConnections = queryUsedConnections.rows[0].count;
 
   response.status(200).json({
     updated_at: updatedAt,
