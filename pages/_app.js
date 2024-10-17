@@ -1,4 +1,4 @@
-import '../styles/index.scss'; // Import the global CSS
+import "../styles/index.scss"; // Import the global CSS
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;
