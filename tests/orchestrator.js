@@ -8,17 +8,18 @@ async function waitForAllServices() {
       retries: 100,
       maxTimeout: 1000,
     });
-  }
 
-  async function fetchStatusPage(bail, tryNumber) {
-    // console.log(tryNumber);
-    const response = await fetch("http://localhost:3000/api/v1/status");
-    if (!response.ok) {
-      throw Error();
+    async function fetchStatusPage() {
+      const response = await fetch("http://localhost:3000/api/v1/status");
+      if (response.status !== 200) {
+        throw Error();
+      }
     }
   }
 }
 
-export default {
-  waitForAllServices: waitForAllServices,
+const orchestrator = {
+  waitForAllServices,
 };
+
+export default orchestrator;
